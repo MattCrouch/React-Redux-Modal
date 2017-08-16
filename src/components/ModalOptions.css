@@ -5,3 +5,27 @@
 .ModalOptions > * {
   flex: 1;
 }
+
+.ModalOptions__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  font-size: 1em;
+  font-family: inherit;
+  padding: 1em;
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+
+.ModalOptions__button:focus, .ModalOptions__button:hover {
+  background-color: #C8C8C8;
+}
+
+.ModalOptions__button--primary {
+  background-color: #2ECC40;
+}
+
+.ModalOptions__button--primary:focus, .ModalOptions__button--primary:hover {
+  background-color: #208E2C;
+}

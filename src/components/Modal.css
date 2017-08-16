@@ -16,8 +16,9 @@
   max-width: 80%;
   min-height: 3em;
   max-height: 100vh;
-  background-color: white;
   position: relative;
+  background-color: white;
+  color: #111111;
 }
 
 .Modal__close {
@@ -26,8 +27,4 @@
   top: 0;
   margin: 1em;
   height: 1em;
-}
-
-.Modal__contents {
-  /* background-color: white; */
 }

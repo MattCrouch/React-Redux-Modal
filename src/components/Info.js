@@ -28,8 +28,7 @@ class Info extends Component {
             </div>
           </div>
           <ModalOptions>
-            <button onClick={this.onDismiss}>Dismiss</button>
-            <button onClick={this.onDismiss}>Dismiss</button>
+            <button className="ModalOptions__button ModalOptions__button--primary" onClick={this.onDismiss}>Dismiss</button>
           </ModalOptions>
         </div>
       </Modal>
