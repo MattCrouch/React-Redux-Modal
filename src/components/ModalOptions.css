@@ -1,0 +1,7 @@
+.ModalOptions {
+  display: flex;
+}
+
+.ModalOptions > * {
+  flex: 1;
+}
