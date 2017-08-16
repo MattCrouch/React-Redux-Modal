@@ -24,8 +24,6 @@
 }
 
 .Modal__close {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   border: 0;
   font-size: 2em;
@@ -44,6 +42,14 @@
   color: #444444;
 }
 
+.Modal[data-closing=true] {
+  animation: fadeOutBackground 0.2s forwards;
+}
+
+.Modal[data-closing=true] .Modal__container {
+  animation: fadeOutModal 0.2s forwards;
+}
+
 @keyframes fadeInBackground {
   from {
     opacity: 0;
@@ -56,12 +62,34 @@
 
 @keyframes fadeInModal {
   from {
-    opacity: 0;
     transform: translateY(10%);
+    opacity: 0;
   }
 
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutBackground {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOutModal {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-10%);
+    opacity: 0;
   }
 }
