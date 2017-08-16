@@ -24,7 +24,7 @@ class Modal extends Component {
     return (
       <div className="Modal" onClick={this.onBackgroundClick}>
         <section className="Modal__container">
-          <button className="Modal__close" onClick={this.onClose}>x</button>
+          <button className="Modal__close" onClick={this.onClose} aria-label="Close">×</button>
           <main className="Modal__contents">
             { this.props.children }
           </main>

@@ -24,11 +24,24 @@
 }
 
 .Modal__close {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  font-size: 2em;
+  font-family: inherit;
+  padding: 0 0.5em;
   position: absolute;
   right: 0;
   top: 0;
-  margin: 1em;
-  height: 1em;
+  cursor: pointer;
+   background: none; 
+  /* margin: 1rem; */
+  /* height: 1em; */
+}
+
+.Modal__close:focus, .Modal__close:hover {
+  color: #444444;
 }
 
 @keyframes fadeInBackground {
