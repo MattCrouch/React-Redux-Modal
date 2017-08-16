@@ -9,6 +9,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 100;
+  animation: fadeInBackground 0.2s;
 }
 
 .Modal__container {
@@ -19,6 +20,7 @@
   position: relative;
   background-color: white;
   color: #111111;
+  animation: fadeInModal 0.2s;
 }
 
 .Modal__close {
@@ -27,4 +29,26 @@
   top: 0;
   margin: 1em;
   height: 1em;
+}
+
+@keyframes fadeInBackground {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
