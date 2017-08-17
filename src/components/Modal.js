@@ -10,8 +10,24 @@ class Modal extends Component {
       closing: false,
     }
 
+    this.onKeyDown = this.onKeyDown.bind(this);
     this.onBackgroundClick = this.onBackgroundClick.bind(this);
     this.onClose = this.onClose.bind(this);
+  }
+
+  componentWillMount() {
+    document.addEventListener('keydown', this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDown);
+  }
+
+  onKeyDown(e) {
+    console.log(e.keyCode);
+    if (e.keyCode === 27) {
+      this.onClose();
+    }
   }
 
   onBackgroundClick(e) {
