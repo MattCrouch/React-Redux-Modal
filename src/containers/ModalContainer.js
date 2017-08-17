@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Modal from '../components/Modal';
 import { hideModal } from '../modules/modal/actions';
 import Info from '../components/Info';
 

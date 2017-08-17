@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ModalSummoner extends Component {
-  render() {
-    return (
-      <button onClick={this.props.showModal}>Show</button>
-    );
-  }
-}
+const ModalSummoner = (props) => (
+    <button onClick={props.showModal}>Show</button>
+)
 
 export default ModalSummoner;

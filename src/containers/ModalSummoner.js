@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ModalSummoner from '../components/ModalSummoner';
 import { showModal } from '../modules/modal/actions';
-
 
 function mapStateToProps(state) {
   return {
