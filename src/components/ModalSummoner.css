@@ -1,0 +1,13 @@
+.ModalSummoner__button {
+  appearance: none;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  padding: 1em;
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+
+.ModalSummoner__button:focus, .ModalSummoner__button:hover {
+  background-color: #C8C8C8;
+}

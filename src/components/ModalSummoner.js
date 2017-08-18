@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './ModalSummoner.css';
+
 class ModalSummoner extends Component {
     constructor() {
         super();
@@ -25,7 +27,18 @@ class ModalSummoner extends Component {
         // Reset refs as it will continue to store older versions
         this.buttons = [];
 
-        return <button ref={button => button && this.buttons.push(button)} onClick={this.props.showModal}>Show</button>
+        return (
+            <div className="ModalSummoner">
+                <h2>Choose a dialog to open</h2>
+                <button
+                    className="ModalSummoner__button"
+                    ref={button => button && this.buttons.push(button)}
+                    onClick={this.props.showInfoModal}
+                >
+                    Customisable "Info" Modal
+                </button>
+            </div>
+        );
     }
 }
 

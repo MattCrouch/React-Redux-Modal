@@ -11,7 +11,17 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    showModal: () => { dispatch(showModal('INFO', { title: 'This is an info window!', message: 'This is some text. It is wonderful.' })) }
+    showInfoModal: () => {
+      dispatch(
+        showModal(
+          'INFO',
+          {
+            title: 'This is an info window!',
+            message: 'This is some text. It is wonderful.'
+          }
+        )
+      )
+    }
   }
 }
 

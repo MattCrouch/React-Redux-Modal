@@ -8,8 +8,14 @@ class App extends Component {
     return (
       <div className="App">
         <ModalContainer />
-        
-        <ModalSummoner />
+
+        <header>
+          <h1>React Redux Modal</h1>
+        </header>
+
+        <main>
+          <ModalSummoner />
+        </main>
       </div>
     );
   }
