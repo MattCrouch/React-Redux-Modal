@@ -15,17 +15,23 @@ class Modal extends Component {
     this.onClose = this.onClose.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
+    this.previousActiveElement = document.activeElement;
+
     document.addEventListener('keydown', this.onKeyDown);
+
+    this.closeButton.focus();
   }
 
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyDown);
+
+    this.previousActiveElement.focus();
   }
 
   onKeyDown(e) {
-    console.log(e.keyCode);
     if (e.keyCode === 27) {
+      // Escape key pressed
       this.onClose();
     }
   }
@@ -48,7 +54,14 @@ class Modal extends Component {
     return (
       <div className="Modal" data-closing={this.state.closing} onClick={this.onBackgroundClick}>
         <section className="Modal__container">
-          <button className="Modal__close" onClick={this.onClose} aria-label="Close">×</button>
+          <button
+            ref={button => { this.closeButton = button; }}
+            className="Modal__close"
+            onClick={this.onClose}
+            aria-label="Close"
+          >
+            ×
+          </button>
           <main className="Modal__contents">
             { this.props.children }
           </main>
