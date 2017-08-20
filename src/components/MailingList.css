@@ -1,0 +1,41 @@
+.MailingList__title {
+  margin-top: 0;
+  margin-right: 3rem;
+}
+
+.MailingList__body {
+  padding: 1em;
+}
+
+.MailingList__image {
+  display: none;
+}
+
+.MailingList__email {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5em 0.75em;
+  border: 2px solid black;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media(min-width: 500px) {
+  .MailingList__message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .MailingList__image {
+    display: block;
+    margin: 1rem;
+    width: 33%;
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .MailingList__email {
+    width: auto;
+  }
+}

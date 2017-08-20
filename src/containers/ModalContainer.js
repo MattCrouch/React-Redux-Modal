@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { hideModal } from '../modules/modal/actions';
+import MailingList from '../containers/MailingList';
 import Info from '../components/Info';
 
 const MODAL_COMPONENTS = {
+  MAILING_LIST: MailingList,
   INFO: Info,
 }
 

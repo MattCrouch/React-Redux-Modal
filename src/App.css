@@ -1,8 +1,35 @@
-.App > header, .App > main {
+.App {
+  margin: 1rem;
+}
+
+.App > header, .App > main, .App > footer {
   text-align: center;
 }
 
-.App h1 {
-  font-size: 3rem;
+.App > header img {
+  width: 200px;
+}
+
+.App > header h1 {
   letter-spacing: 0.15rem;
+}
+
+.App > main button {
+  margin: 0.5rem;
+}
+
+.App > footer {
+  margin-top: 1rem;
+  font-size: small;
+}
+
+.App > footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App > footer ul li {
+  display: inline-block;
+  margin: 0 1rem;
 }

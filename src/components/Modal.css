@@ -18,6 +18,7 @@
   max-width: 100%;
   min-height: 3em;
   max-height: 100vh;
+  overflow: scroll;
   position: relative;
   background-color: white;
   color: #111111;

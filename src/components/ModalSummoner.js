@@ -33,6 +33,13 @@ class ModalSummoner extends Component {
                 <button
                     className="ModalSummoner__button"
                     ref={button => button && this.buttons.push(button)}
+                    onClick={this.props.showMailingListModal}
+                >
+                    Mailing List Prompt
+                </button>
+                <button
+                    className="ModalSummoner__button"
+                    ref={button => button && this.buttons.push(button)}
                     onClick={this.props.showInfoModal}
                 >
                     Customisable "Info" Modal

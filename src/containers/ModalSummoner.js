@@ -11,6 +11,11 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
+    showMailingListModal: () => {
+      dispatch(
+        showModal('MAILING_LIST')
+      )
+    },
     showInfoModal: () => {
       dispatch(
         showModal(

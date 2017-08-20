@@ -1,12 +1,6 @@
-.ModalOptions {
-  display: flex;
-}
-
-.ModalOptions > * {
-  flex: 1;
-}
-
 .ModalOptions__button {
+  display: block;
+  width: 100%;
   appearance: none;
   border: 0;
   font-size: inherit;
@@ -26,4 +20,14 @@
 
 .ModalOptions__button--primary:focus, .ModalOptions__button--primary:hover {
   background-color: #208E2C;
+}
+
+@media(min-width: 400px) {
+  .ModalOptions {
+    display: flex;
+  }
+
+  .ModalOptions > * {
+    flex: 1;
+  }
 }
