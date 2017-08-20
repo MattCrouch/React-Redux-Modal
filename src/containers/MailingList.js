@@ -12,7 +12,7 @@ function mapDispatchToProps(dispatch, ownProps) {
   return {
     signUp: (emailAddress) => {
       dispatch(signUp(emailAddress));
-      ownProps.closeModal();
+      ownProps.hideModal();
     },
   }
 }

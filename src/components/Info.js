@@ -12,7 +12,7 @@ class Info extends Component {
   }
 
   onDismiss(e) {
-    this.props.closeModal();
+    this.props.hideModal();
   }
 
   render() {

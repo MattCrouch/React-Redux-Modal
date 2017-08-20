@@ -8,7 +8,7 @@ class Modal extends Component {
 
     this.onKeyDown = this.onKeyDown.bind(this);
     this.onBackgroundClick = this.onBackgroundClick.bind(this);
-    this.onClose = this.onClose.bind(this);
+    this.onHide = this.onHide.bind(this);
   }
 
   componentDidMount() {
@@ -16,7 +16,7 @@ class Modal extends Component {
 
     document.addEventListener('keydown', this.onKeyDown);
 
-    this.closeButton.focus();
+    this.hideButton.focus();
   }
 
   componentWillUnmount() {
@@ -28,18 +28,18 @@ class Modal extends Component {
   onKeyDown(e) {
     if (e.keyCode === 27) {
       // Escape key pressed
-      this.onClose();
+      this.onHide();
     }
   }
 
   onBackgroundClick(e) {
     if (e.target.className === "Modal") {
-      this.onClose();
+      this.onHide();
     }
   }
 
-  onClose() {
-    this.props.closeModal();
+  onHide() {
+    this.props.hideModal();
   }
 
   render() {
@@ -47,9 +47,9 @@ class Modal extends Component {
       <div className="Modal" data-hiding={this.props.hidingModal} onClick={this.onBackgroundClick}>
         <section className="Modal__container">
           <button
-            ref={button => { this.closeButton = button; }}
+            ref={button => { this.hideButton = button; }}
             className="Modal__close"
-            onClick={this.onClose}
+            onClick={this.onHide}
             aria-label="Close"
           >
             ×
