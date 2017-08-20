@@ -23,7 +23,6 @@
 @media(min-width: 500px) {
   .MailingList__message {
     display: flex;
-    justify-content: space-between;
     align-items: center;
   }
 
@@ -33,6 +32,11 @@
     width: 33%;
     max-width: 100px;
     max-height: 100px;
+    
+  }
+
+  .MailingList__messageContent {
+    flex-grow: 2; 
   }
 
   .MailingList__email {
