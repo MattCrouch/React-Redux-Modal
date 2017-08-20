@@ -4,8 +4,7 @@ import { showModal } from '../modules/modal/actions';
 
 function mapStateToProps(state) {
   return {
-    currentModal: state.modal[state.modal.length - 1],
-    modalShowing: state.modal.length > 0,
+    modalShowing: state.modal.modals.length > 0,
   }
 }
 
