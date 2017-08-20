@@ -22,7 +22,7 @@ function mapDispatchToProps(dispatch) {
           'INFO',
           {
             title: 'This is an info window!',
-            message: 'This is some text. It is wonderful.'
+            message: 'The body text of this box is fully customisable. The data is just passed in as props.'
           }
         )
       )
