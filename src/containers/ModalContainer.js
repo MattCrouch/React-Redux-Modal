@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { hideModal } from '../modules/modal/actions';
+import { hidingModal, hideModal } from '../modules/modal/actions';
 import MailingList from '../containers/MailingList';
 import Info from '../components/Info';
 
@@ -23,13 +23,20 @@ class ModalContainer extends Component {
 
 function mapStateToProps(state) {
   return {
-    currentModal: state.modal[state.modal.length - 1],
+    currentModal: state.modal.modals[state.modal.modals.length - 1],
+    hidingModal: state.modal.hiding,
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    closeModal: () => dispatch(hideModal()),
+    closeModal: () => {
+      dispatch(hidingModal());
+
+      setTimeout(() => {
+        dispatch(hideModal());
+      }, 200);
+    },
   }
 }
 

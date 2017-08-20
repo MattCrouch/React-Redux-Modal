@@ -6,10 +6,6 @@ class Modal extends Component {
   constructor() {
     super();
 
-    this.state = {
-      closing: false,
-    }
-
     this.onKeyDown = this.onKeyDown.bind(this);
     this.onBackgroundClick = this.onBackgroundClick.bind(this);
     this.onClose = this.onClose.bind(this);
@@ -43,16 +39,12 @@ class Modal extends Component {
   }
 
   onClose() {
-    this.setState({ closing: true });
-    
-    setTimeout(() => {
-      this.props.closeModal();
-    }, 200);
+    this.props.closeModal();
   }
 
   render() {
     return (
-      <div className="Modal" data-closing={this.state.closing} onClick={this.onBackgroundClick}>
+      <div className="Modal" data-hiding={this.props.hidingModal} onClick={this.onBackgroundClick}>
         <section className="Modal__container">
           <button
             ref={button => { this.closeButton = button; }}

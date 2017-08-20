@@ -48,11 +48,11 @@
   color: #444444;
 }
 
-.Modal[data-closing=true] {
+.Modal[data-hiding=true] {
   animation: fadeOutBackground 0.2s forwards;
 }
 
-.Modal[data-closing=true] .Modal__container {
+.Modal[data-hiding=true] .Modal__container {
   animation: fadeOutModal 0.2s forwards;
 }
 

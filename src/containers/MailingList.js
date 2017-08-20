@@ -8,12 +8,11 @@ function mapStateToProps(state) {
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps(dispatch, ownProps) {
   return {
     signUp: (emailAddress) => {
-      dispatch(
-        signUp(emailAddress)
-      )
+      dispatch(signUp(emailAddress));
+      ownProps.closeModal();
     },
   }
 }
