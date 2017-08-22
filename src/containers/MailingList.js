@@ -1,13 +1,11 @@
+// Import components
 import { connect } from 'react-redux';
 import MailingList from '../components/MailingList';
+
+// Import sign up action for mailing list
 import { signUp } from '../modules/mailingList/actions';
 
-function mapStateToProps(state) {
-  return {
-
-  }
-}
-
+// Create signUp function to dispatch actions
 function mapDispatchToProps(dispatch, ownProps) {
   return {
     signUp: (emailAddress) => {
@@ -17,4 +15,5 @@ function mapDispatchToProps(dispatch, ownProps) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(MailingList);
+// Connect component to Redux
+export default connect(undefined, mapDispatchToProps)(MailingList);

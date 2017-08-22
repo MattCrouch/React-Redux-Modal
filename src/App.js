@@ -1,6 +1,9 @@
+// Import components
 import React, { Component } from 'react';
 import ModalContainer from './containers/ModalContainer';
 import ModalSummoner from './containers/ModalSummoner';
+
+// Import styles and icon
 import './App.css';
 import ModalIcon from './modal.svg';
 
@@ -8,6 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        {/* Add container to hold modals in */}
         <ModalContainer />
 
         <header>
@@ -16,6 +20,7 @@ class App extends Component {
         </header>
 
         <main>
+          {/* Include a component used to display modals for this tutorial */}
           <ModalSummoner />
         </main>
 
