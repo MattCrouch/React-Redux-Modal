@@ -58,7 +58,7 @@ class Modal extends Component {
   // Create a generic wrapper component for our modal windows
   render() {
     return (
-      <div className="Modal" data-hiding={this.props.hidingModal} onClick={this.onBackgroundClick}>
+      <div className="Modal" role="dialog" aria-modal="true" data-hiding={this.props.hidingModal} onClick={this.onBackgroundClick}>
         <section className="Modal__container">
           <button
             ref={button => { this.hideButton = button; }}
